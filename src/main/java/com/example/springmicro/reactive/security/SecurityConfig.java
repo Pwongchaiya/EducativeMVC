@@ -1,6 +1,7 @@
 package com.example.springmicro.reactive.security;
 
 import java.util.Arrays;
+import java.util.List;
 
 import com.example.springmicro.reactive.repository.UserRepository;
 import org.springframework.boot.CommandLineRunner;
@@ -27,7 +28,7 @@ public class SecurityConfig {
 	CommandLineRunner userLoader(MongoOperations operations) {
 		return args -> {
 			operations.save(new com.example.springmicro.reactive.entity.User(
-					"educative", "password", Arrays.asList("ROLE_USER")));
+					"educative", "password", List.of("ROLE_USER")));
 		};
 	}
 }

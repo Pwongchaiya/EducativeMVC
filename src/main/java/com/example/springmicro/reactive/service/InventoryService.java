@@ -20,7 +20,6 @@ class InventoryService {
     private final ItemRepository itemRepo;
     private final CartRepository cartRepo;
 
- //write code for task 7,8,9 here
     public Mono<Cart> getCart(String cartId){
         return cartRepo.findById(cartId);
     }

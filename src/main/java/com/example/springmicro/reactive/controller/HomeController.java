@@ -43,8 +43,6 @@ public class HomeController {
                 .modelAttribute("userAttributes", user.getAttributes())
                 .build());
         }
-    
-    //Write code for task: 12 here
 
     @PostMapping("/add/{id}")
     Mono<String> addToCart(@AuthenticationPrincipal OAuth2User user, @PathVariable String id){

@@ -3,15 +3,15 @@ package com.example.springmicro.reactive.entity;
 import java.util.Objects;
 
 import org.springframework.data.annotation.Id;
-
 import lombok.*;
+
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
+
 public class Item {
 
-  //write your code here
   private @Id String id;
   private String name;
   private String description;
@@ -24,7 +24,7 @@ public class Item {
       this.price = price;
   }
 
-    @Override
+  @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;

@@ -1,21 +1,21 @@
 package com.example.springmicro.reactive.entity;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import org.springframework.data.annotation.Id;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-
-import com.example.springmicro.reactive.entity.CartItem;
-import org.springframework.data.annotation.Id;
-
-import lombok.*;
 @Setter
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
 public class Cart {
 
-	//write your code here
     private @Id String id;
     private List<CartItem> cartItems;
 
@@ -23,7 +23,6 @@ public class Cart {
         this(id, new ArrayList<>());
     }
 
-    
 	@Override
 	public boolean equals(Object o) {
 		if (this == o)

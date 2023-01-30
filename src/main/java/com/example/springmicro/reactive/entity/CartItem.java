@@ -2,9 +2,8 @@
 package com.example.springmicro.reactive.entity;
 
 import java.util.Objects;
-
-
 import lombok.*;
+
 @Setter
 @Getter
 @NoArgsConstructor
