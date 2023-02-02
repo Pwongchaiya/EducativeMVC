@@ -28,7 +28,6 @@ public class HomeController {
 		this.inventoryService = inventoryService;
 	}
 
-	//Write code for task: 11 here
 	@GetMapping
     Mono<Rendering> home(
         @RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient auth,
@@ -42,7 +41,7 @@ public class HomeController {
                 .modelAttribute("clientName", auth.getClientRegistration().getClientName())
                 .modelAttribute("userAttributes", user.getAttributes())
                 .build());
-        }
+    }
 
     @PostMapping("/add/{id}")
     Mono<String> addToCart(@AuthenticationPrincipal OAuth2User user, @PathVariable String id){
@@ -69,4 +68,5 @@ public class HomeController {
 	private static String cartName(OAuth2User oAuth2User) {
 		return oAuth2User.getName() + "'s Cart";
 	}
+
 }

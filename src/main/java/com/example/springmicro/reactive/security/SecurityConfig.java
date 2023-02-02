@@ -11,7 +11,6 @@ import org.springframework.data.mongodb.core.MongoOperations;
 import org.springframework.security.core.userdetails.ReactiveUserDetailsService;
 import org.springframework.security.core.userdetails.User;
 
-
 @Configuration
 public class SecurityConfig {
 
