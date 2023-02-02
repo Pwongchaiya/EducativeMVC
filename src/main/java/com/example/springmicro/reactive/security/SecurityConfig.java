@@ -24,6 +24,7 @@ public class SecurityConfig {
 						.authorities(user.getRoles().toArray(new String[0])) 
 						.build()); 
 	}
+
 	@Bean
 	CommandLineRunner userLoader(MongoOperations operations) {
 		return args -> {
@@ -31,4 +32,5 @@ public class SecurityConfig {
 					"educative", "password", List.of("ROLE_USER")));
 		};
 	}
+
 }
